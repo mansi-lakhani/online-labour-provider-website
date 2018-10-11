@@ -1,0 +1,22 @@
+.logo{
+	margin-left: 100px;
+}
+.hrc{
+	filter:blur(0.5px);
+	-weblit-filter:blur(0.5px);
+	color: gray;
+}
+.inputsearch{
+	position: absolute;
+	cursor: pointer;
+	float: left;
+}
+.search{
+	padding: 7px;
+	border-radius: 2px;
+	border: 2px black;
+}
+.firstdiv{
+	width: 100%;
+}
+

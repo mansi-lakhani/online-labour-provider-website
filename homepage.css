@@ -1,0 +1,28 @@
+.form{
+				width: 410px;
+				height: 400px;
+				background-color: rgba(0,0,0,0.4);
+				margin: 0 auto;
+				margin-top: 150px;
+				margin-left: 400px;
+				padding-top: 2px;
+				padding-left: 75px;
+		}
+.t{
+				padding: 9px;
+				border-radius: 2px;
+				border: 1px gray;
+				font-size: 14px;
+}
+.createacc{
+					padding: 9px;
+				border-radius: 2px;
+				border: 1px gray;
+				background-color: #cc0000; 
+				color:black;	
+}
+.createacc:hover{
+	background-color: #800000;
+	color: white;
+}
+

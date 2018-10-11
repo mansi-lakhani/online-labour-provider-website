@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>HomePage</title>
+		<style type="text/css">
+			body{
+				background-image: url(14.jpg);
+				background-repeat: no-repeat;
+				margin: 0;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="homepage.css">
+		<script type="text/javascript">
+			function validatedetails(){
+				var fname=document.registration.ufname.value;
+				var lname=document.registration.ulname.value;
+				var mno=document.registration.unumber.value;
+				var email=document.registration.uemail.value;
+				var password=document.registration.upassword.value;
+				var letters=/^[A-Za-z]+$/;
+				var numbers=/^[0-9]+$/;
+				var mail=/^[A-Za-z0-9._]+\@[A-Za-z]+\.[A-Za-z]+{2-5}$/;
+
+				if(fname==""){
+					alert("Enter first name");
+					document.registration.ufname.focus();
+					return false;
+				}
+				if(!(fname.match(letters))){  
+	      			alert("enter only alphabets in first name");  
+	      			return false;  
+	      		}  
+
+	      		if(lname==""){
+					alert("Enter last name");
+					document.registration.ulname.focus();
+					return false;
+				}
+				if(!(lname.match(letters))){  
+	      			alert("enter only alphabets in last name");  
+	      			return false;  
+	      		}
+
+	      		if(email==""){
+	      			alert("Enter email address");
+	      			return false;
+	      		}  
+
+	      		if(!(email.test(mail))){
+	      			alert("Enter valid email address");
+	      			return false;
+	      		}  
+
+	      		if(document.getElementById("unumber").value=="")
+				{
+				alert("Please Enter Mobile Number");
+				return false;
+				}
+				if(isNaN(document.getElementById("unumber").value))
+				{
+				alert("Mobile number only in numbers");
+				return false;
+				}
+	      		if(document.getElementById("upassword").value=="")
+				{
+				alert("Please Enter Password");
+				return false;
+				}
+			}
+		</script>
+	</head>
+		<body>
+			<div class="form">
+				<h1 Style="font-family:times new roman;color:#800000;">Register now</h1>
+				<form name="registration" action="http://localhost/helpersdatabase.php" method="post" onsubmit="return validatedetails()">
+					<input type="text" placeholder="First Name" class="t" size="23" id="ufname" name="fname">
+					<input type="text" placeholder="Last Name" class="t" size="23" id="ulname" name="lname"><br><br>
+					<input type="email" name="email" placeholder="abc@gmail.com" class="t" size="40" id="uemail" name="mailid"><br><br>
+					<input type="text" name="number" placeholder="Phone Number" class="t" size="30" id="unumber" name="phoneno"><br><br>
+					<input type="password" name="password" placeholder="Password" class="t" size="40" id="upassword" name="password"><br><br>
+					<input type="checkbox" name="agreed">i agree to the terms and policies<br><br>
+					<input type="submit" value="Create Account" class="createacc">
+				</form>
+			</div>
+		</body>
+</html>

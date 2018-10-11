@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>Registration Form</title>
+	<style>
+		body {
+    			background-image: url("1.jpg");
+    			background-repeat: no-repeat;
+		     }
+	</style>
+	<script type="text/javascript">
+		function validateform(){
+			var fname=document.registration.firstname.value;
+			var lname=document.registration.lastname.value;
+			var mno=document.registration.number.value;
+			var email=document.registration.email.value;
+			var password=document.registration.password.value;
+			var letters=/^[A-Za-z]+$/;
+			var numbers=/^[0-9]+$/;
+			var mail=/^[A-Za-z0-9._]+\@[A-Za-z]+\.[A-Za-z]+{2-5}$/;
+
+			if(fname==""){
+				alert("Enter first name");
+				document.registration.firstname.focus();
+				return false;
+			}
+			if(!(fname.match(letters))){  
+      			alert("enter only alphabets in first name");  
+      			return false;  
+      		}  
+
+      		if(lname==""){
+				alert("Enter last name");
+				document.registration.firstname.focus();
+				return false;
+			}
+			if(!(lname.match(letters))){  
+      			alert("enter only alphabets in last name");  
+      			return false;  
+      		}  
+
+      		if(mno==""){
+				alert("Enter mobile number");
+				document.registration.firstname.focus();
+				return false;
+			}
+			if(!(mno.match(numbers))){  
+      			alert("enter only numbers in mobile number");  
+      			return false;  
+      		}  
+      		if(mno.length!=10){
+      			alert("Enter 10 digit numbers");
+      		}
+
+      		if(!(email.test(mail))){
+      			alert("Enter valid email address");
+      		}
+
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="Registration.css">
+</head>
+<body>
+	<center>
+	<div id="highlight">
+	   <form name="registration" action="logine.html" method="post" onsubmit="return validateform()">
+	   <fieldset style="width: 300px">
+	   <table align="center" class="highlight">
+	   	<tr><legend align="center" class="h"><h2>Register yourself</h2></legend></tr>
+	   		<tr><td class="h"><b>Name</b></td></tr>
+	   		<tr><td><input type="text" name="firstname" placeholder="FIRST NAME" style="margin-left:60px" class="t"></td>
+	   		<td><input type="text" name="lastname" placeholder="LAST NAME" class="t"></td></tr>
+	   		<tr>
+	   		<td class="h"><b>Mobile no</b></td>
+	   		</tr>
+   				<tr>
+   				<td colspan="2"><select style="margin-left:60px" class="t">
+	   			<option value="Australia">+61</option>
+	   			<option value="India" selected>+91</option>
+	   			<option value="United States">+1</option>
+	   			</select>
+	   			<input type="text" name="number" class="t" placeholder="MOBILE NUMBER"></td>
+	   		</tr>
+	   		<tr></tr>
+	   		<tr><td class="h"><b>Email</b></td>
+	   			<tr></tr>
+	   			<tr>
+	   			<td><input type="email" name="email" style="margin-left:60px" placeholder="abc@gmail.com" class="t"></td>
+	   		</tr>
+	   		<tr></tr>
+	   		<tr><td class="h"><b>PASSWORD</b></td><tr>
+	   		<tr><td><input type="password" name="password" placeholder="********" style="margin-left:60px" class="t"></td></tr>
+	   		<tr></tr>
+	   		<tr></tr>
+	   		<tr></tr>
+	   		<tr></tr>
+	   		<tr></tr>
+	   		<tr></tr>
+	   		<tr><td><input type="submit" name="submit" value="SUBMIT" action="logine.html" style="margin-left:60px"></td>
+	   		<td><input type="reset" name="reset" value="RESET"></td></tr>
+	   </table>
+	   </fieldset>
+	   </div>
+</html>

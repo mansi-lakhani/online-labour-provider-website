@@ -1,0 +1,19 @@
+.h{
+	color:white;
+	font-size:"17px";
+}
+.t{
+	border-radius:1px;
+	border:1px gray;
+	padding:6px;
+}
+.list{
+	color:black;
+	font-size:"200px";
+}
+.tag{
+	color:white;
+}
+#highlight{
+	background-color: rgba(0,0,0,0,2);
+}
